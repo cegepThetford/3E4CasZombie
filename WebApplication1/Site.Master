@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3E4-Zombies</title>
+    <link href="~/Styles/base.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/base2.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div id="global">
+            <div id="entete">
+                <h1>
+                    <img alt="" src="logoApp.jpg"/>
+                    420-3E4-RA<br/>
+                    Programmation orientée objet avancée
+                </h1>
+                <p class="Exercice">
+                    <strong>Cas Zombie:</strong><br/>
+                    Jeu informatique où on combat des créatures.
+                </p>
+            </div>
+            <!-- #entete -->
+            <div id="navigation">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil" />
+                        <asp:MenuItem NavigateUrl="~/etat.aspx" Text="Etat" />
+                        <asp:MenuItem NavigateUrl="~/attaquer.aspx" Text="ATTAQUER!!" />
+                        <asp:MenuItem NavigateUrl="~/reinitialiser.aspx" Text="Reinitialiser" />
+                    </Items>
+                </asp:Menu>
+            </div>
+            <!-- #navigation -->
+            <div id="contenu">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <!-- #contenu -->
+            <div id="pied">
+                <p>
+                    Programme 420 -- Techniques de l'informatique
+                </p>
+                <p id="copyright">
+                    C&eacute;gep de Thetford
+                </p>
+            </div>
+            <!-- #pied -->
+        </div>
+    <!-- #global -->
+    </div>
+    </form>
+</body>
+</html>
